@@ -2,18 +2,16 @@
 
 using namespace std;
 
-void solution()
+double solution(const double a, const double b)
 {
-    int a, b;
-    cin >> a >> b;
-    cout << a / b << endl;
-
-    return;
+    return a / b;
 }
 
 int main(void)
 {
-    solution();
+    double a, b;
+    cin >> a >> b;
+    printf("%.10f", solution(a, b));
 
     return 0;
 }
