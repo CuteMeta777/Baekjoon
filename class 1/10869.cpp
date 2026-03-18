@@ -2,20 +2,24 @@
 
 using namespace std;
 
-char solution(int score)
+void solution(const int A, const int B)
 {
-    if (score >= 90 && score <= 100) return 'A';
-    if (score >= 80 && score <= 89) return 'B';
-    if (score >= 70 && score <= 79) return 'C';
-    if (score >= 60 && score <= 69) return 'D';
-    return 'F';
+    cout << A + B;
+    printf("\n");
+    cout << A - B;
+    printf("\n");
+    cout << A * B;
+    printf("\n");
+    cout << A / B;
+    printf("\n");
+    cout << A % B;
 }
 
 int main(void)
 {
-    int score;
-    cin >> score;
-    cout << solution(score);
+    int A, B;
+    cin >> A >> B;
+    solution(A, B);
 
     return 0;
 }
