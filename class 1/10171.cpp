@@ -4,15 +4,13 @@ using namespace std;
 
 void solution()
 {
-    printf("|\\_/|");
+    printf("\\    /\\");
     printf("\n");
-    printf("|q p|   /}");
+    printf(" )  ( ')");
     printf("\n");
-    printf("( 0 )\"\"\"\\");
+    printf("(  /  )");
     printf("\n");
-    printf("|\"^\"`    |");
-    printf("\n");
-    printf("||_/=\\\\__|");
+    printf(" \\(__)|");
 }
 
 int main(void)
