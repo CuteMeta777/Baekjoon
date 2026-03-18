@@ -6,8 +6,12 @@ void solution()
 {
     int A, B;
 
-    while (cin >> A >> B)
+    while (true)
+    {
+        cin >> A >> B;
+        if (cin.fail()) break;
         cout << A + B << "\n";
+    }
 }
 
 int main(void)
