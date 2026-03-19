@@ -2,15 +2,15 @@
 
 using namespace std;
 
-void solution(const int& A, const int& B, const int& C)
+void solution(const string& A, const string& B, const string& C)
 {
-    cout << A + B - C << "\n";
-    cout << ((A * 10) + B) - C << "\n";
+    cout << stoi(A) + stoi(B) - stoi(C) << "\n";
+    cout << stoi(A + B) - stoi(C) << "\n";
 }
 
 int main(void)
 {
-    int A, B, C;
+    string A, B, C;
     cin >> A >> B >> C;
 
     solution(A, B, C);
