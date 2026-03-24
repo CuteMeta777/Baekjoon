@@ -8,19 +8,23 @@ typedef struct
 {
     int age;
     string name;
+    int register_order;
 } Person;
 
-bool compare(const int& a, const int& b)
+bool compare(const Person& a, const Person& b)
 {
-    return a < b;
+    if (a.age == b.age)
+        return a.register_order < b.register_order;
+    else
+        return a.age < b.age;
 }
 
-void solution(const int& N, vector<int> numbers)
+void solution(const int& N, vector<Person> people)
 {
-    sort(numbers.begin(), numbers.end(), compare);
+    sort(people.begin(), people.end(), compare);
 
-    for (int e : numbers)
-        cout << e << "\n";
+    for (Person e : people)
+        cout << e.age << " " << e.name << "\n";
 }
 
 int main(void)
@@ -28,13 +32,14 @@ int main(void)
     int N;
     cin >> N;
 
-    vector<Person> person(N);
+    vector<Person> people(N);
     for (int i = 0; i < N; i++)
     {
-        cin >> person[i].age >> person.name;
+        cin >> people[i].age >> people[i].name;
+        people[i].register_order = i;
     }
 
-    solution(N, numbers);
+    solution(N, people);
 
     return 0;
 }
