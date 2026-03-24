@@ -1,28 +1,58 @@
 #include <iostream>
-#include <queue>
+#include <vector>
+#include <string>
+#include <stack>
 
 using namespace std;
 
-void solution(const int& N)
+void solution(int T)
 {
-    queue<int> q;
+    stack<char> s;
+    string parenthesis;
+    bool isValid;
 
-    for (int i = N; i >= 1; i--)
-        q.push(i);
-
-    while (q.size() > 1)
+    for (int t = 0; t < T; t++)
     {
-        q.pop();
-        q.
+        isValid = true;
+        cin >> parenthesis;
+
+        while (!s.empty())
+            s.pop();
+
+        for (int i = 0; i < parenthesis.length(); i++)
+        {
+            switch (parenthesis[i])
+            {
+            case '(':
+                s.push('(');
+                break;
+            case ')':
+                if (s.empty()) 
+                {
+                    isValid = false;
+                    break;
+                }
+                s.pop();
+                break;
+            default:
+                cout << "invalid parenthesis input!\n";
+                break;
+            }
+        }
+
+        if (isValid && s.empty())
+            cout << "YES\n";
+        else
+            cout << "NO\n";
     }
 }
 
 int main(void)
 {
-    int N;
-    cin >> N;
+    int T;
+    cin >> T;
 
-    solution(N);
+    solution(T);
 
     return 0;
 }
