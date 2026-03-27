@@ -9,18 +9,10 @@ void fast_IO() // fold it at start
     cout.tie(NULL);
 }
 
-struct compare 
-{
-    bool operator()(const int& a, const int& b) 
-    {
-        return a > b; 
-    }
-};
-
 void solution(int& N)
 {
     int x;
-    priority_queue<int, vector<int>, compare> min_heap;
+    priority_queue<int> max_heap;
 
     while (N--)
     {
@@ -28,17 +20,17 @@ void solution(int& N)
 
         if (x == 0)
         {
-            if (min_heap.empty())
+            if (max_heap.empty())
                 cout << "0" << endl;
             else
             {
-                cout << min_heap.top() << endl;
-                min_heap.pop();
+                cout << max_heap.top() << endl;
+                max_heap.pop();
             }
         }
         else
         {
-            min_heap.push(x);
+            max_heap.push(x);
         }
     }
 }
