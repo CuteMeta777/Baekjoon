@@ -9,22 +9,16 @@ void fast_IO() // fold it at start
     cout.tie(NULL);
 }
 
-void solution(const int& T)
+void solution()
 {
-    for (int t = 0; t < T; t++)
-    {
 
-    }
 }
 
 int main(void)
 {
     fast_IO();
 
-    int T;
-    cin >> T;
-
-    solution(T);
+    solution();
 
     return 0;
 }
