@@ -54,9 +54,9 @@ void inorder(int node)
     if (node == -1)
         return;
 
-    preorder(tree[node][0]);
+    inorder(tree[node][0]);
     cout << (char)(node + 'A');
-    preorder(tree[node][1]);
+    inorder(tree[node][1]);
 }
 
 void postorder(int node)
@@ -64,8 +64,8 @@ void postorder(int node)
     if (node == -1)
         return;
 
-    preorder(tree[node][0]);
-    preorder(tree[node][1]);
+    postorder(tree[node][0]);
+    postorder(tree[node][1]);
     cout << (char)(node + 'A');
 }
 
@@ -76,11 +76,11 @@ int main(void)
     initTree();
     getInput();
 
-    preorder();
+    preorder(0);
     cout << endl;
-    inorder();
+    inorder(0);
     cout << endl;
-    postorder();
+    postorder(0);
 
     return 0;
 }
