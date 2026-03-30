@@ -1,5 +1,8 @@
-# Build 폴더 무시
+# build 폴더 무시
 build/
 
-# VSCode 설정 폴더 무시
+# .vscode 폴더 무시
 .vscode/
+
+# .cph 폴더 무시
+.cph/
