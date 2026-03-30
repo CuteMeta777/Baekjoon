@@ -2,7 +2,7 @@
 #define endl '\n'
 using namespace std;
 
-void fastIO() // fold it at start
+void fast_IO() // fold it at start
 {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
@@ -16,7 +16,7 @@ void solution()
 
 int main(void)
 {
-    fastIO();
+    fast_IO();
 
     solution();
 

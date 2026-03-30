@@ -4,5 +4,5 @@ build/
 # .vscode 폴더 무시
 .vscode/
 
-# .cph 폴더 무시
+# 모든 디렉토리를 검사하여, .cph 폴더를 무시
 .cph/
