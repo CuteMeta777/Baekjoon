@@ -2,9 +2,10 @@
 #define endl '\n'
 using namespace std;
 
-int T;
+// declare
+int N;
 
-void fastIO()
+void fastIO() // fold it at start
 {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
@@ -13,10 +14,10 @@ void fastIO()
 
 void getInput()
 {
-    cin >> T;
+    cin >> N;
 }
 
-void solve()
+void solution()
 {
 
 }
@@ -26,11 +27,7 @@ int main(void)
     fastIO();
 
     getInput();
-
-    while (T--)
-    {
-        solve();
-    }
+    solution();
 
     return 0;
 }
