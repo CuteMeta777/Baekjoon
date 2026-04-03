@@ -18,13 +18,9 @@ void getInput()
 
 void solve()
 {
-    int N, S;
-    cin >> N >> S;
-    int maxScore = 10000000 + N;
-    if (maxScore == S)
-        cout << "Yes" << endl;
-    else
-        cout << "No" << endl;
+    int A; // 10진수
+    cin >> A;
+    cout << A - 1 << endl;
 }
 
 int main(void)
@@ -34,7 +30,9 @@ int main(void)
     getInput();
 
     while (T--)
+    {
         solve();
+    }
 
     return 0;
 }
